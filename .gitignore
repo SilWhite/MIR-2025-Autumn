@@ -2,4 +2,4 @@
 __pycache__/
 /bm25/bm25_index
 /corpus
-/datas
+/datas/*.json
