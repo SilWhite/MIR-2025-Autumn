@@ -1,0 +1,11 @@
+# @package _group_
+
+dpr_wiki:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: data.wikipedia_split.psgs_w100
+  id_prefix: 'wiki:'
+
+wiki_webq:
+  _target_: dpr.data.retriever_data.CsvCtxSrc
+  file: /home/elivis/Desktop/Disk_D/研究生/研一上/信息检索/IR_2025_Project/corpus/wiki_webq_corpus.tsv
+  id_prefix: ''

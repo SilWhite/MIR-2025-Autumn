@@ -1,0 +1,13 @@
+# @package _group_
+
+webq_train:
+  _target_: dpr.data.biencoder_data.JsonQADataset
+  file: datas/webq-train.json
+
+webq_dev:
+  _target_: dpr.data.biencoder_data.JsonQADataset
+  file: datas/webq-dev.json
+
+webq_test:
+  _target_: dpr.data.retriever_data.CsvQASrc
+  file: datas/webq-test.csv
