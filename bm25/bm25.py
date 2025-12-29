@@ -83,5 +83,6 @@ if __name__ == "__main__":
                 {"id": hit.docid, "query": query_text, "score": hit.score}
             )
         result.append(row)
+    os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)

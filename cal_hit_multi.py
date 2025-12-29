@@ -72,6 +72,7 @@ def process_and_save_retrieval_results(
 if __name__ == "__main__":
     # ================== Diff with original code ==================
     parser = argparse.ArgumentParser()
+    parser.add_argument("-c", "--corpus_file", type=str)
     parser.add_argument("-q", "--question_file", type=str)
     parser.add_argument("-r", "--top_docs_json", type=str)
     parser.add_argument("-n", "--name", type=str, help="output folder name in result/")
@@ -82,7 +83,7 @@ if __name__ == "__main__":
     dataset_name = "webq"
     num_threads = args.num_threads  # orginal 10
     output_no_text = False
-    ctx_file = "./corpus/wiki_webq_corpus.tsv"
+    ctx_file = args.corpus_file
 
     match_type = "string"
     input_file_path = args.question_file
