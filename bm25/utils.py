@@ -43,7 +43,7 @@ class LMAPI:
         return response.choices[0].message.content.strip()
 
 
-def query2hyde_passage(query: list[str], lm_api: LMAPI, concat=False) -> list[str]:
+def query2hyde_passage(query: list[str], lm_api: LMAPI, concat=True) -> list[str]:
     passages = [""] * len(query)
     with ThreadPoolExecutor() as executor:
         future_to_query = {

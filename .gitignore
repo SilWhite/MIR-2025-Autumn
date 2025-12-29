@@ -1,5 +1,6 @@
 .DS_Store
 __pycache__/
-/bm25/bm25_index
-/corpus
-/datas/*.json
+bm25/bm25_index
+corpus/
+datas/*.json
+output/result_dpr.json
